@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #6c25ff;
+  --primary-light: #cbb8fb; /* For the 'Already Registered' button background */
+  --text-dark: #1d2226;
+  --text-gray: #7c7c7c;
+  --text-light: #b3b3b3;
+  --bg-color: #f7f8f9;
+  --white: #ffffff;
+  --border-color: #e0e0e0;
+  --input-bg: #f8f8f8;
+  --error: #ff4d4d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* The app container mimicking a mobile device on desktop */
+#root {
+  width: 100%;
+  max-width: 375px;
+  height: 100vh;
+  max-height: 812px;
+  background-color: var(--bg-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Base Typography */
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 15px;
+  color: var(--text-gray);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:active {
+  background-color: #5513de;
+}
+
+.btn-secondary {
+  background-color: var(--primary-light);
+  color: var(--text-dark);
+}
+
+.btn-secondary:active {
+  background-color: #bfa5fa;
+}
+
+.btn-gray {
+  background-color: #cecece;
+  color: var(--white);
+}
+
+/* Common Screen Container */
+.screen-container {
+  padding: 30px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs using Fieldset for floating label style */
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+fieldset {
+  border: 1px solid #d3d3d3;
+  border-radius: 6px;
+  padding: 0 12px;
+  background-color: #f7f8f9;
+}
+
+legend {
+  padding: 0 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 15px;
+  color: var(--text-dark);
+  outline: none;
+}
+
+input::placeholder {
+  color: #c4c4c4;
+}
+
+/* Utility classes */
+.mt-auto {
+  margin-top: auto;
+}
